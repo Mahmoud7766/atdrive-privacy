@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="AT DRIVE - منصة ذكية لحجز الرحلات وربط الركاب بالكباتن بأمان وسرعة">
+    <meta name="keywords" content="AT DRIVE, Taxi, Ride Booking, Transportation, تاكسي, توصيل">
+    <meta name="theme-color" content="#D4AF37">
+
+    <meta property="og:site_name" content="AT DRIVE">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="AT DRIVE">
+    <meta property="og:description" content="منصة ذكية لحجز الرحلات وربط الركاب بالكباتن">
+    <meta property="og:type" content="website">
+
+    <title>AT DRIVE | الرئيسية</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* التنسيقات العامة والتطهير */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        html, body {
+            overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي تماماً */
+            width: 100%;
+        }
+        body{
+            font-family:'Cairo',sans-serif;
+            background: radial-gradient(circle at top, #3b2d0d 0%, #141414 35%, #090909 75%);
+            color:white;
+            scroll-behavior: smooth;
+        }
+        
+        /* الألوان المخصصة */
+        :root{
+            --gold:#D4AF37;
+            --gold-light:#F5D76E;
+            --gold-dark:#B8860B;
+            --gold-glow:rgba(212,175,55,.25);
+        }
+
+        /* شريط التنقل */
+        .navbar{
+            position:sticky;
+            top:0;
+            z-index:100;
+            background:rgba(0,0,0,.85);
+            backdrop-filter:blur(12px);
+            padding:15px 20px;
+            border-bottom:1px solid rgba(255,255,255,.08);
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+            display: block;
+        }
+        .nav-links{
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-size:15px;
+            font-weight: 600;
+            transition: 0.3s;
+            white-space: nowrap; /* يمنع انقسام النص إلى سطرين في الشاشات المتوسطة */
+        }
+        .nav-links a:hover{
+            color:var(--gold-light);
+        }
+        
+        /* زر تحويل اللغة المميز */
+        .lang-switch {
+            color: var(--gold) !important;
+            border: 1px solid rgba(212,175,55,.3);
+            padding: 4px 12px;
+            border-radius: 8px;
+            background: rgba(212,175,55,.05);
+        }
+        .lang-switch:hover {
+            background: var(--gold) !important;
+            color: #111 !important;
+        }
+
+        /* القسم الرئيسي */
+        header{
+            padding:60px 20px;
+            text-align:center;
+            width: 100%;
+        }
+        .hero-logo img {
+            width: 180px;
+            max-width: 40%;
+            height: auto;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+        h1{
+            font-size:48px;
+            color:var(--gold);
+            text-shadow:0 0 20px var(--gold-glow);
+            font-weight:900;
+            letter-spacing:2px;
+        }
+        .subtitle{
+            margin-top:10px;
+            font-size:22px;
+            color:#bcbcbc;
+            font-weight: 600;
+        }
+        .badge{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 18px;
+            border-radius:50px;
+            background:rgba(212,175,55,.12);
+            border:1px solid rgba(212,175,55,.25);
+            color:var(--gold-light);
+            font-size:14px;
+            font-weight: bold;
+        }
+        .hero-text{
+            max-width:700px;
+            margin:25px auto 0;
+            font-size:18px;
+            line-height:2;
+            color:#d7d7d7;
+        }
+        .hero-buttons{
+            margin-top:35px;
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        /* الأزرار المحسنة */
+        .button{
+            display:inline-block;
+            padding:14px 28px;
+            border-radius:12px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            color:#111 !important;
+            text-decoration:none;
+            font-weight:900;
+            text-align:center;
+            transition:.3s;
+            box-shadow: 0 4px 15px rgba(212,175,55,.20);
+        }
+        .button:hover{
+            transform:translateY(-3px);
+            box-shadow: 0 6px 25px rgba(212,175,55,.40);
+        }
+        .secondary-btn{
+            display:inline-block;
+            padding:14px 28px;
+            border-radius:12px;
+            border:1px solid var(--gold);
+            color:var(--gold-light);
+            text-decoration:none;
+            font-weight:700;
+            text-align:center;
+            transition:.3s;
+        }
+        .secondary-btn:hover{
+            background:var(--gold);
+            color:#111;
+        }
+
+        /* الحاويات والأقسام */
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+        }
+        .section{
+            margin:60px 0;
+        }
+        .section h2{
+            font-size:30px;
+            margin-bottom:30px;
+            color: var(--gold-light);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        /* شبكة الكروت للـ Grid المتناسق */
+        .card-actions{
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+            margin-top:auto;
+            width: 100%;
+        }
+        .cards{
+            display:grid;
+            /* تم تعديل الـ minmax هنا ليناسب الشاشات الصغيرة جداً دون خروج عن الحواف */
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+        .card{
+            background:rgba(255,255,255,.04);
+            border:1px solid rgba(255,255,255,.08);
+            border-radius:20px;
+            padding:30px;
+            display:flex;
+            flex-direction:column;
+            height:100%;
+            transition:.3s;
+        }
+        .card:hover{
+            transform:translateY(-8px);
+            border-color:var(--gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,.4), 0 0 25px rgba(212,175,55,.15);
+        }
+        .card h3{
+            margin-bottom:15px;
+            font-size:24px;
+            color: #fff;
+        }
+        .card p{
+            color:#cfcfcf;
+            line-height:1.8;
+            margin-bottom:20px;
+            flex-grow:1;
+        }
+        .about{
+            font-size:18px;
+            line-height:2;
+            color:#dddddd;
+        }
+        .contact{
+            font-size:24px;
+            margin-top:15px;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        /* التذييل الفوتر */
+        footer{
+            margin-top:80px;
+            padding:50px 20px;
+            text-align:center;
+            background:#050505;
+            color:#888;
+            border-top:1px solid rgba(255,255,255,.08);
+            width: 100%;
+        }
+        footer h3 {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .footer-links{
+            margin: 25px 0;
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+        .footer-links a{
+            color:#bdbdbd;
+            text-decoration:none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .footer-links a:hover{
+            color:var(--gold);
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* التجاوب الذكي مع شاشات الهواتف (Media Queries المحسنة) */
+        @media(max-width:768px){
+            .nav-container{
+                flex-direction:column;
+                gap:15px;
+            }
+            .nav-links{
+                width:100%;
+                justify-content:center;
+                flex-wrap:wrap;
+                gap:12px;
+            }
+            .nav-links a{
+                font-size:14px;
+            }
+            h1{
+                font-size:34px;
+            }
+            .subtitle{
+                font-size:18px;
+            }
+            .hero-text{
+                font-size:16px;
+            }
+            .hero-buttons{
+                flex-direction:column;
+                width:100%;
+            }
+            .hero-buttons a{
+                width:100%;
+            }
+            .card{
+                padding:22px;
+            }
+            .section h2{
+                font-size:24px;
+            }
+            .contact{
+                font-size:18px;
+            }
+            /* جعل روابط الفوتر تظهر بشكل منظم في الهواتف */
+            .footer-links{
+                flex-direction:row;
+                justify-content: center;
+                gap:15px;
+            }
+        }
+
+        @media(max-width:480px){
+            .footer-links{
+                flex-direction: column;
+                gap: 12px;
+            }
+            .cards {
+                grid-template-columns: 1fr; /* كارت واحد ممتد في الشاشات الصغيرة جداً */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="AT DRIVE Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#about">من نحن</a>
+            <a href="#privacy">الخصوصية والتحكم</a>
+            <a href="#technology">التقنيات</a>
+            <a href="#contact">الدعم الفني</a>
+            <a href="index-en.html" class="lang-switch">English</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="hero-logo">
+        <img src="assets/logo.png" alt="AT DRIVE App Logo">
+    </div>
+    <h1>AT DRIVE</h1>
+    <div class="subtitle">تنقل ذكي. آمن. سريع.</div>
+    <div class="badge">🚀 Powered by Google Maps & Firebase</div>
+    <p class="hero-text">
+        منصة متطورة ومعتمدة تربط الركابة بالكباتن باستخدام أحدث تقنيات الخرائط والموقع المباشر اللحظي والخدمات السحابية الحديثة لضمان تجربة تنقل يومية موثوقة وآمنة تماماً.
+    </p>
+    <div class="hero-buttons">
+        <a class="button" href="#privacy">الخصوصية وإدارة الحساب</a>
+        <a class="secondary-btn" href="#contact">تواصل مع الدعم</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="section">
+        <h2>AT DRIVE بالأرقام</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>24/7</h3>
+                <p>دعم فني مستمر وجاهز لخدمتك في أي وقت.</p>
+            </div>
+            <div class="card">
+                <h3>100%</h3>
+                <p>بيانات مستخدم مشفرة ومحمية بالكامل سحابياً.</p>
+            </div>
+            <div class="card">
+                <h3>GPS</h3>
+                <p>تتبع حي ومباشر لمسارات الرحلة لضمان السلامة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>من نحن</h2>
+        <div class="about">
+            <p>
+                AT DRIVE هي منصة رقمية رائدة ومتطورة تهدف إلى إعادة ابتكار وتحسين تجربة النقل والملاحة اليومية لكل من الركاب والكباتن الشركاء، من خلال تسخير التكنولوجيا الحديثة لتوفير رحلات أسهل، واقتصادية، وأكثر أماناً.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="privacy">
+        <h2>الخصوصية وإدارة الحسابات</h2>
+        <p class="about" style="margin-bottom: 25px;">
+            نحن نحترم خصوصية جميع المستخدمين بشكل صارم، ونلتزم بحفظ وتطهير البيانات الحساسة وفقاً لقوانين حماية البيانات ومتطلبات متجر Google Play. يمكنك الوصول للسياسات أو طلب حذف الحساب مباشرة أدناه:
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>🚖 حساب الراكب (Rider)</h3>
+                <p>إدارة بيانات رحلاتك، والاطلاع على حقوقك البرمجية والتحكم التام في ملفك.</p>
+                <div class="card-actions">
+                    <a class="button" href="rider.html">سياسة خصوصية الراكب</a>
+                    <a class="secondary-btn" href="account-deletion/rider.html">طلب حذف حساب الراكب</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>🚗 حساب الكابتن (Captain)</h3>
+                <p>تفاصيل تتبع الموقع في الخلفية، مراجعة المستندات الرسمية المرفوعة، والتحكم بالبيانات.</p>
+                <div class="card-actions">
+                    <a class="button" href="captain.html">سياسة خصوصية الكابتن</a>
+                    <a class="secondary-btn" href="account-deletion/captain.html">طلب حذف حساب الكابتن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="technology">
+        <h2>التقنيات والبنية التحتية</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🔥 Google Firebase</h3>
+                <p>تأمين قواعد البيانات اللحظية المشفرة وإرسال الإشعارات والرسائل الفورية الفعالة.</p>
+            </div>
+            <div class="card">
+                <h3>🗺️ Google Maps API</h3>
+                <p>تحديد دقيق للمواقع الجغرافية وتوجيه ذكي للمسارات لتفادي الازدحام المروري.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Flutter SDK</h3>
+                <p>بناء تطبيق متماسك وعالي الأداء يوفر تجربة سلسة وسريعة لكافة الهواتف.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>لماذا تختار AT DRIVE؟</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🛡️ أمان وتحقق صارم</h3>
+                <p>فحص ومراجعة مستندات الكباتن الجنائية والمهنية يدوياً قبل تفعيل الحساب.</p>
+            </div>
+            <div class="card">
+                <h3>📍 تتبع ومشاركة لايف</h3>
+                <p>متابعة دقيقة للرحلة مع إمكانية مشاركة خط السير مع العائلة لمزيد من الاطمئنان.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ ربط ذكي وفوري</h3>
+                <p>خوارزميات متطورة تضمن اقترانك بأقرب سيارة متاح بجوارك دون هدر للوقت.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>الأمان والسرية الشاملة</h2>
+        <div class="about">
+            نحن نطبق بروتوكولات حماية متقدمة لمنع أي وصول غير مصرح به لبيانات المستخدمين. لا نبيع، ولا نؤجر، ولا نشارك البيانات مع أي شركات إعلانية أو ترويجية على الإطلاق، ويقتصر تداول الموقع والأسماء مع الطرف الآخر لإتمام الرحلة النشطة فحسب.
+        </div>
+    </section>
+
+</div>
+
+<footer id="contact">
+    <h3>AT DRIVE</h3>
+    <p style="margin-bottom: 15px;">المنصة الذكية الرائدة لحجز الرحلات الآمنة وتسهيل عمليات التنقل والملاحة الجغرافية.</p>
+    
+    <div class="footer-links">
+        <a href="rider.html">سياسة خصوصية الراكب</a>
+        <a href="captain.html">سياسة خصوصية الكابتن</a>
+        <a href="account-deletion/rider.html">حذف حساب الراكب</a>
+        <a href="account-deletion/captain.html">حذف حساب الكابتن</a>
+    </div>
+
+    <p style="font-size: 18px; margin-top: 15px;">
+        📧 للدعم والاستفسارات: <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+    </p>
+    <br>
+    <p>© 2026 AT DRIVE. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>

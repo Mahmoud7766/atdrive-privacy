@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain Account Deletion - AT DRIVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/favicon.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body{
+            font-family:'Cairo',sans-serif;
+            background: radial-gradient(circle at top, #3b2d0d 0%, #141414 35%, #090909 75%);
+            color:#fff;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F5D76E;
+            --gold-dark: #B8860B;
+            --gold-glow: rgba(212,175,55,.25);
+        }
+
+        .language {
+            text-align: center;
+            padding: 15px;
+            background: #000;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            width: 100%;
+        }
+        .language a {
+            margin: 0 10px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .language a:hover {
+            color: var(--gold-light);
+        }
+
+        .nav-wrapper {
+            width: 100%;
+            max-width: 950px;
+            margin: auto;
+            padding: 20px 20px 0 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .back-btn{
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: black;
+            text-decoration:none;
+            padding:12px 18px;
+            border-radius:12px;
+            font-weight:700;
+            transition:.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .back-btn:hover{
+            background: var(--gold-light);
+            color: black;
+            transform: translateY(-2px);
+        }
+        .hero{
+            padding:40px 20px 30px;
+            text-align:center;
+            width: 100%;
+        }
+        .logo{
+            font-size:42px;
+            font-weight:900;
+            color: var(--gold);
+            margin-bottom:15px;
+            text-shadow: 0 0 20px var(--gold-glow);
+        }
+        .hero h1{
+            font-size:38px;
+            margin-bottom:10px;
+            color: #fff;
+        }
+        .hero p{
+            color:#bdbdbd;
+            font-size:18px;
+            font-weight: 600;
+        }
+        .container{
+            max-width:950px;
+            margin:auto;
+            padding:20px;
+            width: 100%;
+        }
+        .card{
+            background:rgba(255,255,255,.04);
+            border:1px solid rgba(255,255,255,.08);
+            border-radius:24px;
+            padding:35px;
+            backdrop-filter:blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            width: 100%;
+        }
+        h2{
+            color: var(--gold-light);
+            margin-top:35px;
+            margin-bottom:15px;
+            font-size:24px;
+            border-left: 4px solid var(--gold);
+            padding-left: 10px;
+        }
+        p,li{
+            line-height:2;
+            color:#d5d5d5;
+        }
+        ul,ol{
+            padding-left:25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .notice{
+            background: rgba(212, 175, 55, 0.1);
+            border-left:5px solid var(--gold);
+            padding:18px;
+            border-radius:12px;
+            margin:25px 0;
+        }
+        .warning{
+            background:rgba(255,80,80,.12);
+            border-left:5px solid #ff5050;
+            padding:18px;
+            border-radius:12px;
+            margin:25px 0;
+        }
+        .warning strong {
+            color: #ff7676;
+        }
+        .email-box{
+            background:#000;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding:18px;
+            border-radius:12px;
+            margin-top:15px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+        .email-box a{
+            color: var(--gold);
+            text-decoration:none;
+            font-weight:700;
+            transition: 0.3s;
+        }
+        .email-box a:hover{
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+        .footer{
+            text-align:center;
+            margin-top:50px;
+            padding:25px;
+            border-top:1px solid rgba(255,255,255,.08);
+            color:#888;
+            width: 100%;
+        }
+        .update{
+            margin-top:25px;
+            font-size:14px;
+            color:#999;
+            text-align: center;
+        }
+
+        @media(max-width:768px){
+            .nav-wrapper {
+                justify-content: center;
+                padding-top: 15px;
+            }
+            .hero{
+                padding:20px 20px;
+            }
+            .logo{
+                font-size:32px;
+            }
+            .hero h1{
+                font-size:26px;
+            }
+            .hero p{
+                font-size:15px;
+            }
+            .card{
+                padding:22px;
+                border-radius: 16px;
+            }
+            h2{
+                font-size:20px;
+                margin-top: 25px;
+            }
+            p, li{
+                font-size: 15px;
+            }
+            ul, ol{
+                padding-left: 20px;
+            }
+        }
+
+        @media(max-width:400px){
+            .card {
+                padding: 15px;
+            }
+            .email-box {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="language">
+    <a href="captain.html">العربية</a>
+    <a href="captain-en.html">English</a>
+</div>
+
+<div class="nav-wrapper">
+    <a href="../index-en.html" class="back-btn">← Back to Home</a>
+</div>
+
+<header class="hero">
+    <div class="logo">🚖 AT DRIVE</div>
+    <h1>Captain Account Deletion</h1>
+    <p>Driver Account Deletion Request</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <p>The AT DRIVE platform provides captains with the ability to permanently delete their account and associated personal data in accordance with Google Play requirements and data protection policies outlining store user rights.</p>
+
+        <div class="warning">
+            <strong>Important Notice:</strong><br>
+            Once the deletion process is executed, the captain will not be able to recover the account or any associated data. It will require creating an entirely new account if you wish to use the platform again.
+        </div>
+
+        <h2>How to Delete Your Account via the App</h2>
+        <ol>
+            <li>Open the AT DRIVE Captain app.</li>
+            <li>Go to the Settings page.</li>
+            <li>Select "Delete Account".</li>
+            <li>Review the final confirmation message.</li>
+            <li>Tap "Confirm Account Deletion".</li>
+        </ol>
+
+        <div class="notice">
+            The deletion request is sent directly to the system, and the permanent removal of data associated with the account from active servers will be scheduled immediately.
+        </div>
+
+        <h2>Request Account Deletion via Email</h2>
+        <p>If you are unable to access the application, you can send an account deletion request from the email address registered with your account to:</p>
+
+        <div class="email-box">
+            <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+        </div>
+
+        <p style="margin-top: 15px;">Please include: <strong>Captain Account Deletion Request</strong> in the subject line of the email.</p>
+
+        <h2>Data That Will Be Permanently Deleted</h2>
+        <ul>
+            <li>Full name, phone number, and email address.</li>
+            <li>Profile picture and basic profile details.</li>
+            <li>Vehicle information, driver's license, and vehicle registration documents.</li>
+            <li>Official documents previously uploaded for identity verification purposes.</li>
+            <li>Geographical location history recorded and linked to the account.</li>
+            <li>Detailed activity logs within the app.</li>
+        </ul>
+
+        <h2>Data We May Retain Temporarily</h2>
+        <p>Certain financial or legal records may be retained for a limited period if required by local laws or for the following specific purposes:</p>
+        <ul>
+            <li>Resolving financial disputes or pending transactions in the wallet.</li>
+            <li>Preventing fraud and combating abuse across the network.</li>
+            <li>Complying with local legal and regulatory obligations.</li>
+        </ul>
+
+        <h2>Deletion Processing Timeframe</h2>
+        <p>Account deletion requests are executed, and all active servers are completely sanitized within a period not exceeding <strong>30 days</strong> from the date the request is submitted or confirmed.</p>
+
+        <h2>Contact Support</h2>
+        <p>If you have any questions or inquiries regarding your data or account deletion, you can reach out to us via:</p>
+        <div class="email-box">
+            <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+        </div>
+
+        <div class="update">Last Updated: June 2026</div>
+    </div>
+
+    <div class="footer">
+        © 2026 AT DRIVE — All Rights Reserved
+    </div>
+</div>
+
+</body>
+</html>

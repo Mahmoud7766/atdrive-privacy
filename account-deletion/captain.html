@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حذف حساب الكابتن - AT DRIVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/favicon.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body{
+            font-family:'Cairo',sans-serif;
+            background: radial-gradient(circle at top, #3b2d0d 0%, #141414 35%, #090909 75%);
+            color:#fff;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F5D76E;
+            --gold-dark: #B8860B;
+            --gold-glow: rgba(212,175,55,.25);
+        }
+
+        .language {
+            text-align: center;
+            padding: 15px;
+            background: #000;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            width: 100%;
+        }
+        .language a {
+            margin: 0 10px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .language a:hover {
+            color: var(--gold-light);
+        }
+
+        .nav-wrapper {
+            width: 100%;
+            max-width: 950px;
+            margin: auto;
+            padding: 20px 20px 0 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .back-btn{
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: black;
+            text-decoration:none;
+            padding:12px 18px;
+            border-radius:12px;
+            font-weight:700;
+            transition:.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .back-btn:hover{
+            background: var(--gold-light);
+            color: black;
+            transform: translateY(-2px);
+        }
+        .hero{
+            padding:40px 20px 30px;
+            text-align:center;
+            width: 100%;
+        }
+        .logo{
+            font-size:42px;
+            font-weight:900;
+            color: var(--gold);
+            margin-bottom:15px;
+            text-shadow: 0 0 20px var(--gold-glow);
+        }
+        .hero h1{
+            font-size:38px;
+            margin-bottom:10px;
+            color: #fff;
+        }
+        .hero p{
+            color:#bdbdbd;
+            font-size:18px;
+            font-weight: 600;
+        }
+        .container{
+            max-width:950px;
+            margin:auto;
+            padding:20px;
+            width: 100%;
+        }
+        .card{
+            background:rgba(255,255,255,.04);
+            border:1px solid rgba(255,255,255,.08);
+            border-radius:24px;
+            padding:35px;
+            backdrop-filter:blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            width: 100%;
+        }
+        h2{
+            color: var(--gold-light);
+            margin-top:35px;
+            margin-bottom:15px;
+            font-size:24px;
+            border-right: 4px solid var(--gold);
+            padding-right: 10px;
+        }
+        p,li{
+            line-height:2;
+            color:#d5d5d5;
+        }
+        ul,ol{
+            padding-right:25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .notice{
+            background: rgba(212, 175, 55, 0.1);
+            border-right:5px solid var(--gold);
+            padding:18px;
+            border-radius:12px;
+            margin:25px 0;
+        }
+        .warning{
+            background:rgba(255,80,80,.12);
+            border-right:5px solid #ff5050;
+            padding:18px;
+            border-radius:12px;
+            margin:25px 0;
+        }
+        .warning strong {
+            color: #ff7676;
+        }
+        .email-box{
+            background:#000;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding:18px;
+            border-radius:12px;
+            margin-top:15px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+        .email-box a{
+            color: var(--gold);
+            text-decoration:none;
+            font-weight:700;
+            transition: 0.3s;
+        }
+        .email-box a:hover{
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+        .footer{
+            text-align:center;
+            margin-top:50px;
+            padding:25px;
+            border-top:1px solid rgba(255,255,255,.08);
+            color:#888;
+            width: 100%;
+        }
+        .update{
+            margin-top:25px;
+            font-size:14px;
+            color:#999;
+            text-align: center;
+        }
+
+        @media(max-width:768px){
+            .nav-wrapper {
+                justify-content: center;
+                padding-top: 15px;
+            }
+            .hero{
+                padding:20px 20px;
+            }
+            .logo{
+                font-size:32px;
+            }
+            .hero h1{
+                font-size:26px;
+            }
+            .hero p{
+                font-size:15px;
+            }
+            .card{
+                padding:22px;
+                border-radius: 16px;
+            }
+            h2{
+                font-size:20px;
+                margin-top: 25px;
+            }
+            p, li{
+                font-size: 15px;
+            }
+            ul, ol{
+                padding-right: 20px;
+            }
+        }
+
+        @media(max-width:400px){
+            .card {
+                padding: 15px;
+            }
+            .email-box {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="language">
+    <a href="captain.html">العربية</a>
+    <a href="captain-en.html">English</a>
+</div>
+
+<div class="nav-wrapper">
+    <a href="../index.html" class="back-btn">← الصفحة الرئيسية</a>
+</div>
+
+<header class="hero">
+    <div class="logo">🚖 AT DRIVE</div>
+    <h1>حذف حساب الكابتن</h1>
+    <p>Driver Account Deletion Request</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <p>توفر منصة AT DRIVE للكباتن إمكانية حذف الحساب والبيانات الشخصية المرتبطة به بشكل دائم وفقاً لمتطلبات Google Play وسياسات حماية البيانات الشارحة لمستخدمي المتجر.</p>
+
+        <div class="warning">
+            <strong>تنبيه هام:</strong><br>
+            بعد تنفيذ عملية الحذف لن يتمكن الكابتن من استعادة الحساب أو البيانات المرتبطة به، وسيتطلب الأمر إنشاء حساب جديد بالكامل إذا رغب في استخدام المنصة مرة أخرى.
+        </div>
+
+        <h2>كيفية حذف الحساب من التطبيق</h2>
+        <ol>
+            <li>افتح تطبيق AT DRIVE Captain.</li>
+            <li>انتقال إلى صفحة الإعدادات.</li>
+            <li>اختر "حذف الحساب".</li>
+            <li>راجع رسالة التأكيد الصارمة.</li>
+            <li>اضغط "تأكيد حذف الحساب".</li>
+        </ol>
+
+        <div class="notice">
+            يتم إرسال طلب الحذف مباشرة إلى النظام ويتم البدء في جدولة إزالة البيانات المرتبطة بالحساب من السيرفرات النشطة.
+        </div>
+
+        <h2>طلب حذف الحساب عبر البريد الإلكتروني</h2>
+        <p>إذا تعذر عليك الوصول إلى التطبيق يمكنك إرسال طلب حذف الحساب من البريد الإلكتروني المرتبط بالحساب إلى:</p>
+
+        <div class="email-box">
+            <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+        </div>
+
+        <p style="margin-top: 15px;">مع كتابة: <strong>طلب حذف حساب الكابتن</strong> في عنوان الرسالة.</p>
+
+        <h2>البيانات التي يتم حذفها نهائياً</h2>
+        <ul>
+            <li>الاسم الكامل ورقم الهاتف والبريد الإلكتروني.</li>
+            <li>الصورة الشخصية وبيانات الملف الشخصي.</li>
+            <li>بيانات المركبة ورخصة القيادة ورخصة المركبة.</li>
+            <li>المستندات الرسمية المرفوعة سابقاً للتحقق.</li>
+            <li>بيانات الموقع الجغرافي المسجلة والمرتبطة بالحساب.</li>
+            <li>سجلات النشاط التفصيلية داخل التطبيق.</li>
+        </ul>
+
+        <h2>البيانات التي قد نحتفظ بها مؤقتاً</h2>
+        <p>قد يتم الاحتفاظ ببعض السجلات المالية أو القانونية لفترة محدودة إذا كان ذلك مطلوباً بموجب القوانين المحلية أو للأغراض التالية:</p>
+        <ul>
+            <li>حل النزاعات المالية أو المعاملات المعلقة في المحفظة.</li>
+            <li>منع الاحتيال وإساءة الاستخدام على الشبكة.</li>
+            <li>الامتثال للالتزامات القانونية والتنظيمية المحلية.</li>
+        </ul>
+
+        <h2>مدة تنفيذ الحذف الفعلي</h2>
+        <p>يتم تنفيذ طلب حذف الحساب وتطهير كافة الخوادم الفعالة خلال مدة لا تتجاوز <strong>30 يوماً</strong> من تاريخ تقديم الطلب أو تأكيده.</p>
+
+        <h2>التواصل مع الدعم</h2>
+        <p>إذا كانت لديك أي استفسارات تتعلق بحذف البيانات أو الحساب يمكنك التواصل معنا عبر:</p>
+        <div class="email-box">
+            <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+        </div>
+
+        <div class="update">آخر تحديث: يونيو 2026</div>
+    </div>
+
+    <div class="footer">
+        © 2026 AT DRIVE — All Rights Reserved
+    </div>
+</div>
+
+</body>
+</html>

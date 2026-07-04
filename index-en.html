@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="AT DRIVE - A smart ride-booking platform connecting passengers with captains safely and quickly">
+    <meta name="keywords" content="AT DRIVE, Taxi, Ride Booking, Transportation, Taxi, Delivery">
+    <meta name="theme-color" content="#D4AF37">
+
+    <meta property="og:site_name" content="AT DRIVE">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="AT DRIVE">
+    <meta property="og:description" content="A smart ride-booking platform connecting passengers with captains">
+    <meta property="og:type" content="website">
+
+    <title>AT DRIVE | Home</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Styles and Reset */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body{
+            font-family:'Cairo',sans-serif;
+            background: radial-gradient(circle at top, #3b2d0d 0%, #141414 35%, #090909 75%);
+            color:white;
+            scroll-behavior: smooth;
+        }
+        
+        :root{
+            --gold:#D4AF37;
+            --gold-light:#F5D76E;
+            --gold-dark:#B8860B;
+            --gold-glow:rgba(212,175,55,.25);
+        }
+
+        /* Navigation Bar */
+        .navbar{
+            position:sticky;
+            top:0;
+            z-index:100;
+            background:rgba(0,0,0,.85);
+            backdrop-filter:blur(12px);
+            padding:15px 20px;
+            border-bottom:1px solid rgba(255,255,255,.08);
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+            display: block;
+        }
+        .nav-links{
+            display:flex;
+            gap:20px;
+            align-items: center;
+        }
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-size:15px;
+            font-weight: 600;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        .nav-links a:hover{
+            color:var(--gold-light);
+        }
+        
+        .lang-switch {
+            color: var(--gold) !important;
+            border: 1px solid rgba(212,175,55,.3);
+            padding: 4px 12px;
+            border-radius: 8px;
+            background: rgba(212,175,55,.05);
+        }
+        .lang-switch:hover {
+            background: var(--gold) !important;
+            color: #111 !important;
+        }
+
+        /* Hero Section */
+        header{
+            padding:60px 20px;
+            text-align:center;
+            width: 100%;
+        }
+        .hero-logo img {
+            width: 180px;
+            max-width: 40%;
+            height: auto;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+        h1{
+            font-size:48px;
+            color:var(--gold);
+            text-shadow:0 0 20px var(--gold-glow);
+            font-weight:900;
+            letter-spacing:2px;
+        }
+        .subtitle{
+            margin-top:10px;
+            font-size:22px;
+            color:#bcbcbc;
+            font-weight: 600;
+        }
+        .badge{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 18px;
+            border-radius:50px;
+            background:rgba(212,175,55,.12);
+            border:1px solid rgba(212,175,55,.25);
+            color:var(--gold-light);
+            font-size:14px;
+            font-weight: bold;
+        }
+        .hero-text{
+            max-width:700px;
+            margin:25px auto 0;
+            font-size:18px;
+            line-height:2;
+            color:#d7d7d7;
+        }
+        .hero-buttons{
+            margin-top:35px;
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .button{
+            display:inline-block;
+            padding:14px 28px;
+            border-radius:12px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            color:#111 !important;
+            text-decoration:none;
+            font-weight:900;
+            text-align:center;
+            transition:.3s;
+            box-shadow: 0 4px 15px rgba(212,175,55,.20);
+        }
+        .button:hover{
+            transform:translateY(-3px);
+            box-shadow: 0 6px 25px rgba(212,175,55,.40);
+        }
+        .secondary-btn{
+            display:inline-block;
+            padding:14px 28px;
+            border-radius:12px;
+            border:1px solid var(--gold);
+            color:var(--gold-light);
+            text-decoration:none;
+            font-weight:700;
+            text-align:center;
+            transition:.3s;
+        }
+        .secondary-btn:hover{
+            background:var(--gold);
+            color:#111;
+        }
+
+        /* Containers and Sections */
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+        }
+        .section{
+            margin:60px 0;
+        }
+        .section h2{
+            font-size:30px;
+            margin-bottom:30px;
+            color: var(--gold-light);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .card-actions{
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+            margin-top:auto;
+            width: 100%;
+        }
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+        .card{
+            background:rgba(255,255,255,.04);
+            border:1px solid rgba(255,255,255,.08);
+            border-radius:20px;
+            padding:30px;
+            display:flex;
+            flex-direction:column;
+            height:100%;
+            transition:.3s;
+        }
+        .card:hover{
+            transform:translateY(-8px);
+            border-color:var(--gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,.4), 0 0 25px rgba(212,175,55,.15);
+        }
+        .card h3{
+            margin-bottom:15px;
+            font-size:24px;
+            color: #fff;
+        }
+        .card p{
+            color:#cfcfcf;
+            line-height:1.8;
+            margin-bottom:20px;
+            flex-grow:1;
+        }
+        .about{
+            font-size:18px;
+            line-height:2;
+            color:#dddddd;
+        }
+        .contact{
+            font-size:24px;
+            margin-top:15px;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        /* Footer */
+        footer{
+            margin-top:80px;
+            padding:50px 20px;
+            text-align:center;
+            background:#050505;
+            color:#888;
+            border-top:1px solid rgba(255,255,255,.08);
+            width: 100%;
+        }
+        footer h3 {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .footer-links{
+            margin: 25px 0;
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+        .footer-links a{
+            color:#bdbdbd;
+            text-decoration:none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .footer-links a:hover{
+            color:var(--gold);
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Media Queries */
+        @media(max-width:768px){
+            .nav-container{
+                flex-direction:column;
+                gap:15px;
+            }
+            .nav-links{
+                width:100%;
+                justify-content:center;
+                flex-wrap:wrap;
+                gap:12px;
+            }
+            .nav-links a{
+                font-size:14px;
+            }
+            h1{
+                font-size:34px;
+            }
+            .subtitle{
+                font-size:18px;
+            }
+            .hero-text{
+                font-size:16px;
+            }
+            .hero-buttons{
+                flex-direction:column;
+                width:100%;
+            }
+            .hero-buttons a{
+                width:100%;
+            }
+            .card{
+                padding:22px;
+            }
+            .section h2{
+                font-size:24px;
+            }
+            .contact{
+                font-size:18px;
+            }
+            .footer-links{
+                flex-direction:row;
+                justify-content: center;
+                gap:15px;
+            }
+        }
+
+        @media(max-width:480px){
+            .footer-links{
+                flex-direction: column;
+                gap: 12px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="AT DRIVE Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#privacy">Privacy & Control</a>
+            <a href="#technology">Technology</a>
+            <a href="#contact">Support</a>
+            <a href="index.html" class="lang-switch">العربية</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="hero-logo">
+        <img src="assets/logo.png" alt="AT DRIVE App Logo">
+    </div>
+    <h1>AT DRIVE</h1>
+    <div class="subtitle">Smart. Safe. Fast Mobility.</div>
+    <div class="badge">🚀 Powered by Google Maps & Firebase</div>
+    <p class="hero-text">
+        An advanced and certified platform connecting passengers with captains using the latest mapping, real-time live location, and modern cloud services to ensure a reliable and completely secure daily commute experience.
+    </p>
+    <div class="hero-buttons">
+        <a class="button" href="#privacy">Privacy & Account Management</a>
+        <a class="secondary-btn" href="#contact">Contact Support</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="section">
+        <h2>AT DRIVE in Numbers</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>24/7</h3>
+                <p>Continuous technical support, ready to serve you at any time.</p>
+            </div>
+            <div class="card">
+                <h3>100%</h3>
+                <p>Fully encrypted and secured user data stored in the cloud.</p>
+            </div>
+            <div class="card">
+                <h3>GPS</h3>
+                <p>Live and direct trip route tracking to ensure safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <div class="about">
+            <p>
+                AT DRIVE is a leading, state-of-the-art digital platform that aims to reinvent and improve the daily transportation and navigation experience for both passengers and partner captains. By leveraging modern technology, we provide easier, more economical, and safer trips.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="privacy">
+        <h2>Privacy & Account Management</h2>
+        <p class="about" style="margin-bottom: 25px;">
+            We strictly respect the privacy of all users and are committed to preserving and sanitizing sensitive data in accordance with data protection laws and Google Play Store requirements. You can access our policies or request account deletion directly below:
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>🚖 Rider Account</h3>
+                <p>Manage your trip data, view your software rights, and maintain full control over your profile.</p>
+                <div class="card-actions">
+                    <!-- تم التعديل لتكون في المجلد الرئيسي مباشرة وتعديل مسار الحذف -->
+                    <a class="button" href="rider-en.html">Rider Privacy Policy</a>
+                    <a class="secondary-btn" href="account-deletion/rider-en.html">Request Rider Account Deletion</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>🚗 Captain Account</h3>
+                <p>Details regarding background location tracking, review uploaded official documents, and manage your data.</p>
+                <div class="card-actions">
+                    <!-- تم التعديل لتكون في المجلد الرئيسي مباشرة وتعديل مسار الحذف -->
+                    <a class="button" href="captain-en.html">Captain Privacy Policy</a>
+                    <a class="secondary-btn" href="account-deletion/captain-en.html">Request Captain Account Deletion</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="technology">
+        <h2>Technology & Infrastructure</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🔥 Google Firebase</h3>
+                <p>Securing encrypted real-time databases and sending efficient instant push notifications and messages.</p>
+            </div>
+            <div class="card">
+                <h3>🗺️ Google Maps API</h3>
+                <p>Accurate geolocation and smart route mapping to completely avoid traffic congestion.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Flutter SDK</h3>
+                <p>Building a coherent, high-performance application that delivers a smooth and fast experience across all smartphones.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Why Choose AT DRIVE?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🛡️ Strict Safety & Verification</h3>
+                <p>Manual screening and review of captains' criminal and professional records before account activation.</p>
+            </div>
+            <div class="card">
+                <h3>📍 Live Tracking & Sharing</h3>
+                <p>Precise trip monitoring with the ability to share your live route with family for absolute peace of mind.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Smart & Instant Matching</h3>
+                <p>Advanced algorithms ensure you are paired with the closest available vehicle nearby without wasting time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Comprehensive Security & Confidentiality</h2>
+        <div class="about">
+            We implement advanced protection protocols to prevent unauthorized access to user data. We absolutely do not sell, rent, or share data with any advertising or promotional companies. The exchange of location data and names is strictly limited to the other party only to complete the active trip.
+        </div>
+    </section>
+
+</div>
+
+<footer id="contact">
+    <h3>AT DRIVE</h3>
+    <p style="margin-bottom: 15px;">The leading smart platform for booking safe rides and facilitating seamless daily transportation and geographical navigation.</p>
+    
+    <div class="footer-links">
+        <!-- تحديث روابط التذييل لتطابق الهيكل الجديد تماماً -->
+        <a href="rider-en.html">Rider Privacy Policy</a>
+        <a href="captain-en.html">Captain Privacy Policy</a>
+        <a href="account-deletion/rider-en.html">Delete Rider Account</a>
+        <a href="account-deletion/captain-en.html">Delete Captain Account</a>
+    </div>
+
+    <p style="font-size: 18px; margin-top: 15px;">
+        📧 For support and inquiries: <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+    </p>
+    <br>
+    <p>© 2026 AT DRIVE. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
