@@ -3,220 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحة طلب حذف حساب الراكب والعميل لمنصة AT DRIVE.">
+    <meta name="theme-color" content="#D4AF37">
     <title>حذف حساب الراكب | AT DRIVE</title>
-    <!-- ربط أيقونة الموقع بالشعار الخاص بك -->
-    <link rel="icon" type="image/png" href="assets/logo.png">
     
+    <link rel="icon" type="image/png" href="../assets/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+        *{ margin:0; padding:0; box-sizing:border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
         body{
-            font-family:'Cairo',sans-serif;
-            background: radial-gradient(circle at top, #3b2d0d 0%, #141414 35%, #090909 75%);
-            color:white;
-            min-height:100vh;
+            font-family:'Cairo',sans-serif; background: radial-gradient(circle at top, #3b2d0d 0%, #141414 35%, #090909 75%);
+            color:white; min-height:100vh; text-align: right;
         }
-        
         :root {
-            --gold: #D4AF37;
-            --gold-light: #F5D76E;
-            --gold-dark: #B8860B;
-            --gold-glow: rgba(212,175,55,.25);
+            --gold: #D4AF37; --gold-light: #F5D76E; --gold-dark: #B8860B; --gold-glow: rgba(212,175,55,.25);
         }
-
-        .header{
-            padding:25px;
-            text-align:center;
+        .language {
+            text-align: center; padding: 15px; background: #000; border-bottom: 1px solid rgba(255,255,255,.08); width: 100%;
         }
+        .language a { margin: 0 10px; font-weight: 700; color: var(--gold); text-decoration: none; transition: 0.3s; }
+        .language a:hover { color: var(--gold-light); }
+        .header{ padding:25px; text-align:center; width: 100%; }
         .back-btn{
-            display:inline-block;
-            margin-top:20px;
-            padding:12px 24px;
-            border-radius:12px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color:white;
-            text-decoration:none;
-            transition:.3s;
+            display:inline-block; margin-top:20px; padding:12px 24px; border-radius:12px; background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1); color:white; text-decoration:none; transition:.3s;
         }
-        .back-btn:hover{
-            background: var(--gold);
-            color: black;
-            box-shadow: 0 4px 15px var(--gold-glow);
-        }
-        .container{
-            max-width:900px;
-            margin:auto;
-            padding:20px;
-        }
-        .card{
-            background:rgba(255,255,255,.04);
-            border:1px solid rgba(255,255,255,.08);
-            border-radius:24px;
-            padding:40px;
-            backdrop-filter:blur(10px);
-            box-shadow:0 20px 40px rgba(0,0,0,.6);
-        }
-        .logo{
-            font-size:40px;
-            font-weight:900;
-            color: var(--gold);
-            margin-bottom:10px;
-            text-align:center;
-            text-shadow: 0 0 20px var(--gold-glow);
-        }
-        .hero-title{
-            font-size:34px;
-            font-weight:900;
-            text-align:center;
-            margin-bottom:10px;
-        }
-        .hero-sub{
-            text-align:center;
-            color:#999;
-            margin-bottom:35px;
-            font-weight: 600;
-        }
-        .notice{
-            background: rgba(212, 175, 55, 0.1);
-            border-right:4px solid var(--gold);
-            padding:18px;
-            border-radius:12px;
-            margin-bottom:30px;
-        }
-        h2{
-            color: var(--gold-light);
-            margin-top:30px;
-            margin-bottom:15px;
-            font-size:24px;
-            border-right: 4px solid var(--gold);
-            padding-right: 10px;
-        }
-        p,li{
-            line-height:2;
-            color:#d8d8d8;
-            font-size:16px;
-        }
-        ul,ol{
-            padding-right:22px;
-        }
-        li{
-            margin-bottom:8px;
-        }
-        .info-box{
-            background:#000;
-            border:1px solid rgba(255,255,255,.08);
-            padding:20px;
-            border-radius:16px;
-            margin-top:20px;
-        }
-        .email-box{
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding:15px;
-            border-radius:12px;
-            text-align:center;
-            margin-top:15px;
-            font-weight:700;
-        }
-        .email-box a{
-            color: var(--gold);
-            text-decoration:none;
-            transition: 0.3s;
-        }
-        .email-box a:hover {
-            color: var(--gold-light);
-            text-decoration: underline;
-        }
-        .update{
-            margin-top:30px;
-            text-align:center;
-            color:#999;
-            font-size:14px;
-        }
-        .footer{
-            margin-top:50px;
-            padding:25px;
-            text-align:center;
-            color:#888;
-            border-top:1px solid rgba(255,255,255,.08);
-        }
+        .back-btn:hover{ background: var(--gold); color: black; box-shadow: 0 4px 15px var(--gold-glow); }
+        .container{ max-width:900px; margin:auto; padding:20px; width: 100%; }
+        .card{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:24px; padding:40px; backdrop-filter:blur(10px); box-shadow:0 20px 40px rgba(0,0,0,.6); width: 100%; }
+        .logo{ font-size:40px; font-weight:900; color: var(--gold); margin-bottom:10px; text-align:center; text-shadow: 0 0 20px var(--gold-glow); }
+        .hero-title{ font-size:34px; font-weight:900; text-align:center; margin-bottom:10px; }
+        .hero-sub{ text-align:center; color:#999; margin-bottom:35px; font-weight: 600; }
+        .notice{ background: rgba(212, 175, 55, 0.1); border-right:4px solid var(--gold); padding:18px; border-radius:12px; margin-bottom:30px; }
+        .warning{ background:rgba(255,80,80,.12); border-right:4px solid #ff5050; padding:18px; border-radius:12px; margin-bottom:30px; }
+        .warning strong { color: #ff7676; }
+        h2{ color: var(--gold-light); margin-top:30px; margin-bottom:15px; font-size:24px; border-right: 4px solid var(--gold); padding-right: 10px; }
+        p,li{ line-height:2; color:#d8d8d8; font-size:16px; }
+        ul,ol{ padding-right:22px; }
+        li{ margin-bottom:8px; }
+        .info-box{ background:#000; border:1px solid rgba(255,255,255,.08); padding:20px; border-radius:16px; margin-top:20px; }
+        .email-box{ background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); padding:15px; border-radius:12px; text-align:center; margin-top:15px; font-weight:700; word-wrap: break-word; }
+        .email-box a{ color: var(--gold); text-decoration:none; transition: 0.3s; }
+        .email-box a:hover { color: var(--gold-light); text-decoration: underline; }
+        .update{ margin-top:30px; text-align:center; color:#999; font-size:14px; }
+        footer{ margin-top:50px; padding:25px; text-align:center; color:#888; border-top:1px solid rgba(255,255,255,.08); width: 100%; }
         @media(max-width:768px){
-            .card{
-                padding:25px;
-            }
-            .hero-title{
-                font-size:26px;
-            }
+            .card{ padding:25px; } .hero-title{ font-size:26px; } h2{ font-size:20px; } ul, ol{ padding-right: 20px; }
         }
     </style>
 </head>
 <body>
 
+<div class="language">
+    <a href="rider.html">العربية</a>
+    <a href="rider-en.html">English</a>
+</div>
+
 <div class="header">
-    <a href="../index.html" class="back-btn">← العودة إلى الصفحة الرئيسية</a>
+    <a href="../index.html" class="back-btn">← العودة للرئيسية</a>
 </div>
 
 <div class="container">
     <div class="card">
         <div class="logo">🚖 AT DRIVE</div>
         <h1 class="hero-title">حذف حساب الراكب</h1>
-        <div class="hero-sub">Rider Account Deletion Request</div>
+        <div class="hero-sub">بوابة تقديم طلبات حذف حسابات الركاب والعملاء</div>
 
         <div class="notice">
-            يتيح تطبيق AT DRIVE للراكب حذف الحساب والبيانات الشخصية المرتبطة به بشكل دائم وفقاً لمتطلبات متجر Google Play الصارمة وسياسة الخصوصية وحماية المستخدم المعتمدة.
+            يوفر تطبيق AT DRIVE للركاب شفافية وتحكماً كاملين في بياناتهم، مما يسمح لهم بحذف حساباتهم والبيانات الشخصية المرتبطة بها نهائياً بما يتوافق تماماً مع متطلبات سلامة وأمان بيانات متجر Google Play وقواعد حماية المستخدمين.
         </div>
 
-        <h2>متى يتم حذف البيانات؟</h2>
-        <p>يتم تنفيذ طلب حذف الحساب وتطهير السيرفرات تماماً خلال مدة لا يتجاوز <strong>30 يوماً</strong> من تاريخ تقديم الطلب، ويتم الحذف بشكل أسرع في معظم الحالات العادية.</p>
+        <div class="warning">
+            <strong>تنبيه هام:</strong><br>
+            بمجرد حذف حسابك، لا يمكن التراجع عن هذا الإجراء. سيتم تدمير جميع تفاصيل سجل ملفك الشخصي، والمزايا الترويجية المكتسبة، وأرصدة المحفظة الحالية نهائياً. يتطلب استخدام AT DRIVE في المستقبل إنشاء حساب راكب جديد تماماً.
+        </div>
 
-        <h2>كيفية حذف الحساب من داخل التطبيق</h2>
-        <ol>
-            <li>افتح تطبيق AT DRIVE Rider.</li>
-            <li>ادخل إلى قائمة الإعدادات (الملف الشخصي).</li>
-            <li>اختر أمر "حذف الحساب والبيانات".</li>
-            <li>أكد طلب الحذف النهائي.</li>
-            <li>سيقوم النظام تلقائياً بجدولة الحساب للإزالة الشاملة.</li>
+        <h2>متى سيتم حذف بياناتك؟</h2>
+        <p>يتم بدء طلبات حذف الحساب فوراً. يتم معالجة وتطهير وحذف جميع طوابير البيانات الشخصية من خوادمنا التشغيلية خلال فترة زمنية صارمة لا تتجاوز <strong>30 يوماً</strong> من تاريخ تقديم الطلب. في معظم الحالات العادية والمثالية، يتم المسح بشكل أسرع من ذلك بكثير.</p>
+
+        <h2>كيفية حذف حسابك من داخل التطبيق</h2>
+        <p>الطريقة القياسية والأكثر سلاسة لمسح حسابك وبياناتك هي من داخل واجهة التطبيق مباشرة:</p>
+        <ol style="margin-top: 10px; margin-bottom: 15px;">
+            <li>افتح تطبيق <strong>AT DRIVE الراكب</strong> على جهازك.</li>
+            <li>انتقل إلى قائمة <strong>الإعدادات</strong> (صفحة الملف الشخصي).</li>
+            <li>اختر خيار <strong>"حذف الحساب والبيانات"</strong>.</li>
+            <li>راجع رسالة التحذير النهائية المنبثقة بخصوص فقدان البيانات والBalances.</li>
+            <li>أكد طلب الحذف النهائي والدائم للحساب.</li>
         </ol>
 
-        <h2>البيانات التي سيتم حذفها نهائياً</h2>
+        <h2>البيانات الخاضعة للمسح الدائم</h2>
+        <p>عند التحقق والنجاح في معالجة طلبك، سيتم حذف فئات المستخدم التالية نهائياً وبشكل قطعي من قواعد بياناتنا الحية:</p>
         <ul>
-            <li>الاسم الكامل ورقم الهاتف المحمول والبريد الإلكتروني.</li>
-            <li>الصورة الشخصية وبيانات الحساب الأساسية.</li>
-            <li>العناوين والمواقع المفضلة والمحفوظة.</li>
-            <li>سجل الرحلات التفصيلي والمسارات الجغرافية المرتبطة بالحساب.</li>
-            <li>أي بيانات تعريفية أخرى تم تخزينها أثناء استخدام التطبيق.</li>
+            <li>الاسم القانوني الكامل، رقم الهاتف المحمول المسجل، والبريد الإلكتروني المربوط بالحساب.</li>
+            <li>الصورة الشخصية، الرموز التعبيرية (Avatars)، وبيانات تهيئة الحساب الأساسية والـ Metadata.</li>
+            <li>العناوين المحفوظة، المواقع المخصصة المثبتة مسبقاً، والوجهات المفضلة المسجلة تاريخياً.</li>
+            <li>سجلات الرحلات المفصلة، وتواريخ العمليات المالية، ومسارات الرحلات الجغرافية التاريخية.</li>
+            <li>رموز الأجهزة (Tokens) المستخدمة لإرسال إشعارات سحابة Firebase (FCM).</li>
         </ul>
 
-        <h2>البيانات التي قد نضطر للاحتفاظ بها مؤقتاً</h2>
+        <h2>البيانات التي قد نكون ملزمين بالاحتفاظ بها مؤقتاً</h2>
         <div class="info-box">
-            بموجب السياسات التنظيمية، قد يتم الاحتفاظ ببعض السجلات المالية المحدودة أو الفواتير لفترة معينة إذا كان ذلك مطلوباً للامتثال للقوانين المحلية، أو لمنع عمليات الاحتيال، أو لتسوية النزاعات المالية المعلقة على البطاقات الائتمانية والمحفظة.
+            بموجب السياسات التنظيمية والمالية والأمنية المشروعة، لا يمكن إسقاط بعض الفواتير المحدودة أو سجلات المعاملات أو النزاعات النشطة فوراً. يتم الاحتفاظ بهذه البيانات بشكل صارم حصرياً للامتثال للأطر القانونية والشركات المحلية، ومعايير التدقيق المالي، ومنع إساءة استخدام المنصة، أو تسوية نزاعات المحفظة المالية العالقة.
         </div>
 
         <h2>طلب حذف الحساب عبر البريد الإلكتروني</h2>
-        <p>إذا لم تتمكن من الوصول إلى التطبيق لأي سبب تقني، يمكنك إرسال طلب حذف الحساب مباشرة من بريدك المسجل إلينا:</p>
+        <p>إذا واجهت عقبات تقنية أو لم تكن قادراً على تسجيل الدخول إلى تطبيق الهاتف المحمول، يمكنك تقديم طلب إزالة يدوي. لأغراض السلامة والمصادقة، <strong>يجب إرسال البريد الإلكتروني من عنوانك المسجل بالتطبيق</strong> إلى:</p>
         <div class="email-box">
-            <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
+            <a href="mailto:mahmoud12958@gmail.com?subject=Rider%20Account%20Deletion%20Request">mahmoud12958@gmail.com</a>
+        </div>
+        <p style="margin-top: 10px;">يرجى كتابة عبارة <strong style="color: var(--gold-light);">"Rider Account Deletion Request"</strong> في موضوع الرسالة لضمان المعالجة الفعالة والسريعة.</p>
+
+        <h2>الدعم الفني وحقوق الخصوصية</h2>
+        <p style="margin-top: 15px;">لأي استفسارات تتعلق بخصوصية المستخدم، وحقوق تقليل البيانات الفردية، أو لمتابعة حالة حذف حسابك، يرجى مراسلتنا على:</p>
+        <div class="email-box">
+            <a href="mailto:mahmoud12958@gmail.com?subject=Rider%20Privacy%20Inquiry">mahmoud12958@gmail.com</a>
         </div>
 
-        <h2>الدعم الفني والخصوصية</h2>
-        <p style="margin-top: 15px;">لأي استفسارات متعلقة بالخصوصية وحقوق البيانات أو لمتابعة طلب حذف حسابك يرجى مراسلتنا على:</p>
-        <div class="email-box">
-            <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
-        </div>
-
-        <div class="update">آخر تحديث: يونيو 2026</div>
+        <div class="update">آخر تحديث ومراجعة للتدقيق: يوليو 2026</div>
     </div>
 
-    <div class="footer">
-        © 2026 AT DRIVE — All Rights Reserved
-    </div>
+    <footer>
+        <p>© 2026 AT DRIVE — جميع الحقوق محفوظة</p>
+        <p style="font-size:12px; margin-top:5px; color:#555;">نسخة متوافقة مع سياسات Google Play v1.1</p>
+    </footer>
 </div>
 
 </body>
