@@ -91,16 +91,21 @@
             color:var(--gold-light);
         }
         
-        .lang-switch {
+        .lang-dropdown {
             color: var(--gold) !important;
             border: 1px solid rgba(212,175,55,.3);
-            padding: 4px 12px;
+            padding: 6px 10px;
             border-radius: 8px;
-            background: rgba(212,175,55,.05);
+            background: #000;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
         }
-        .lang-switch:hover {
-            background: var(--gold) !important;
-            color: #111 !important;
+        .lang-dropdown:hover {
+            border-color: var(--gold-light);
+            box-shadow: 0 0 10px var(--gold-glow);
         }
 
         /* Hero Section */
@@ -369,7 +374,13 @@
             <a href="#privacy">Privacy & Control</a>
             <a href="#technology">Technology</a>
             <a href="#contact">Support</a>
-            <a href="index.html" class="lang-switch">العربية</a>
+
+            <!-- قائمة اختيار اللغات الذكية والمصححة للموقع -->
+            <select class="lang-dropdown" onchange="location = this.value;">
+                <option value="index.html">العربية</option>
+                <option value="index-en.html" selected>English</option>
+                <option value="index-fr.html">Français</option>
+            </select>    
         </div>
     </div>
 </nav>
@@ -429,7 +440,6 @@
                 <h3>🚖 Rider Account</h3>
                 <p>Manage your trip data, view your software rights, and maintain full control over your profile.</p>
                 <div class="card-actions">
-                    <!-- تم التعديل لتكون في المجلد الرئيسي مباشرة وتعديل مسار الحذف -->
                     <a class="button" href="rider-en.html">Rider Privacy Policy</a>
                     <a class="secondary-btn" href="account-deletion/rider-en.html">Request Rider Account Deletion</a>
                 </div>
@@ -438,7 +448,6 @@
                 <h3>🚗 Captain Account</h3>
                 <p>Details regarding background location tracking, review uploaded official documents, and manage your data.</p>
                 <div class="card-actions">
-                    <!-- تم التعديل لتكون في المجلد الرئيسي مباشرة وتعديل مسار الحذف -->
                     <a class="button" href="captain-en.html">Captain Privacy Policy</a>
                     <a class="secondary-btn" href="account-deletion/captain-en.html">Request Captain Account Deletion</a>
                 </div>
@@ -496,7 +505,6 @@
     <p style="margin-bottom: 15px;">The leading smart platform for booking safe rides and facilitating seamless daily transportation and geographical navigation.</p>
     
     <div class="footer-links">
-        <!-- تحديث روابط التذييل لتطابق الهيكل الجديد تماماً -->
         <a href="rider-en.html">Rider Privacy Policy</a>
         <a href="captain-en.html">Captain Privacy Policy</a>
         <a href="account-deletion/rider-en.html">Delete Rider Account</a>

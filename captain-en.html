@@ -190,11 +190,12 @@
 <div class="language">
     <a href="captain.html">العربية</a>
     <a href="captain-en.html">English</a>
+    <a href="captain-fr.html">Français</a>
 </div>
 
 <header class="hero">
     <div style="text-align:center;margin-bottom:20px;">
-        <a href="index.html">🏠 Return to Homepage</a>
+        <a href="index-en.html">🏠 Return to Homepage</a>
     </div>
     <div class="hero-logo">
         <img src="assets/logo.png" alt="AT DRIVE App Logo">
@@ -230,9 +231,9 @@
         <li><span class="highlight">Official Verification Documents:</span> Driver's license, vehicle registration, criminal record check, and other documents required to verify identity and driver eligibility.</li>
         <li><span class="highlight">Vehicle Data:</span> Vehicle type, model, plate number, vehicle photos, and related vehicle profile details.</li>
         <li>
-<span class="highlight">Geographical Location Data:</span>
-Precise device location, real-time updates, trip routes, and location history collected only while the captain is Online and the app is running in the foreground or as a foreground service, and during active trips.
-</li>
+            <span class="highlight">Geographical Location Data:</span>
+            Precise device location, real-time updates, trip routes, and location history collected only while the captain is Online and the app is running in the foreground or as a foreground service, and during active trips.
+        </li>
         <li><span class="highlight">Financial Transaction Data:</span> Completed ride history, earnings, balances, wallet records, pending payments, and financial dispute records.</li>
         <li><span class="highlight">App and Device Data:</span> Push notification tokens such as Firebase Cloud Messaging (FCM) tokens, device identifiers or app instance identifiers where applicable, app status, and technical data needed to send notifications and maintain account security.</li>
         <li><span class="highlight">Ratings, Support, and Safety Data:</span> Ratings, reviews, complaints, support messages, safety reports, fraud-prevention records, and account activity logs.</li>
@@ -240,16 +241,13 @@ Precise device location, real-time updates, trip routes, and location history co
     </ul>
 
     <h2>2. Foreground Location Disclosure</h2>
-<div class="alert-box">
-    <strong>Important Notice for Google Play Reviewers and Users:</strong><br>
-The AT DRIVE Captain application collects precise location data while the captain is actively using the application and while the application is running in the foreground or as a foreground service after the captain sets their status to "Online".
-
-The application uses only foreground location permission (ACCESS_FINE_LOCATION) and does not request ACCESS_BACKGROUND_LOCATION.
-
-The application does not collect location data when the foreground service is stopped or the user explicitly logs out/goes offline or when the foreground service is stopped.
-
-<strong>We do not collect location data in the background when the app is not in use or not visible to the user.</strong>
-</div>
+    <div class="alert-box">
+        <strong>Important Notice for Google Play Reviewers and Users:</strong><br>
+        The AT DRIVE Captain application collects precise location data while the captain is actively using the application and while the application is running in the foreground or as a foreground service after the captain sets their status to "Online".<br><br>
+        The application uses only foreground location permission (ACCESS_FINE_LOCATION) and does not request ACCESS_BACKGROUND_LOCATION.<br><br>
+        The application does not collect location data when the foreground service is stopped or the user explicitly logs out/goes offline.<br><br>
+        <strong>We do not collect location data in the background when the app is not in use or not visible to the user.</strong>
+    </div>
 
     <p>Location information is collected only to operate the driver service and only while the captain is available for work or during an active trip:</p>
     <ul>
@@ -287,7 +285,7 @@ The application does not collect location data when the foreground service is st
                 <li><strong>Firebase Storage:</strong> To store uploaded profile, vehicle, and verification document images.</li>
                 <li><strong>Firebase Cloud Messaging:</strong> To send ride requests, account alerts, and service notifications.</li>
                 <li><strong>Google Maps Platform:</strong> To provide maps, route guidance, live location display, and navigation-related features.</li>
-                <li><strong>Firebase Crashlytics (Google), when enabled, to collect crash reports and diagnostic information for improving application stability.</strong> To detect crashes, improve stability, and resolve technical issues.</li>
+                <li><strong>Firebase Crashlytics (Google):</strong> When enabled, to collect crash reports and diagnostic information for improving application stability, detecting crashes, and resolving technical issues.</li>
             </ul>
         </li>
     </ul>
@@ -299,7 +297,7 @@ The application does not collect location data when the foreground service is st
     <h2>6. Driver Rights, Account and Data Deletion</h2>
     <p>AT DRIVE is committed to enabling captains to control their personal data in accordance with applicable Google Play user data requirements:</p>
     <ul>
-        <li>Captains can request the permanent deletion of their account and personal data at any time by navigating to the Settings menu inside the app and clicking <strong>"Delete Account"</strong>, or by visiting the dedicated web deletion request link: <a href="./account-deletion/captain.html" target="_blank">Captain Account Deletion Link</a>.</li>
+        <li>Captains can request the permanent deletion of their account and personal data at any time by navigating to the Settings menu inside the app and clicking <strong>"Delete Account"</strong>, or by visiting the dedicated web deletion request link: <a href="account-deletion/captain-en.html" target="_blank">Captain Account Deletion Link</a>.</li>
         <li><strong>What happens upon a deletion request?</strong> Once confirmed, we delete personal data, official documents, and trip-related location records from active systems within a period not exceeding 30 days, except for data that we must retain for legal, regulatory, security, fraud-prevention, financial compliance, pending transaction, or dispute-resolution purposes.</li>
     </ul>
 

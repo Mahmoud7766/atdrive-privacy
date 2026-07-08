@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="AT DRIVE - منصة ذكية لحجز الرحلات وربط الركاب بالكباتن بأمان وسرعة">
-    <meta name="keywords" content="AT DRIVE, Taxi, Ride Booking, Transportation, تاكسي, توصيل">
+    <meta name="description" content="AT DRIVE - Une plateforme intelligente pour réserver des courses et connecter les passagers aux chauffeurs en toute sécurité et rapidité.">
+    <meta name="keywords" content="AT DRIVE, Taxi, Réservation de course, Transport, VTC, Chauffeur">
     <meta name="theme-color" content="#D4AF37">
 
     <meta property="og:site_name" content="AT DRIVE">
-    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale" content="fr_FR">
     <meta property="og:title" content="AT DRIVE">
-    <meta property="og:description" content="منصة ذكية لحجز الرحلات وربط الركاب بالكباتن">
+    <meta property="og:description" content="Plateforme intelligente pour la réservation de courses et la mise en relation passagers-chauffeurs.">
     <meta property="og:type" content="website">
 
-    <title>AT DRIVE | الرئيسية</title>
+    <title>AT DRIVE | Accueil</title>
 
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +22,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* التنسيقات العامة والتطهير */
+        /* Styles Généraux et Réinitialisation */
         *{
             margin:0;
             padding:0;
             box-sizing:border-box;
         }
         html, body {
-            overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي تماماً */
+            overflow-x: hidden; /* Empêche le défilement horizontal */
             width: 100%;
         }
         body{
@@ -39,7 +39,7 @@
             scroll-behavior: smooth;
         }
         
-        /* الألوان المخصصة */
+        /* Couleurs Personnalisées */
         :root{
             --gold:#D4AF37;
             --gold-light:#F5D76E;
@@ -47,7 +47,7 @@
             --gold-glow:rgba(212,175,55,.25);
         }
 
-        /* شريط التنقل */
+        /* Barre de Navigation (Navbar) */
         .navbar{
             position:sticky;
             top:0;
@@ -82,13 +82,13 @@
             font-size:15px;
             font-weight: 600;
             transition: 0.3s;
-            white-space: nowrap; /* يمنع انقسام النص إلى سطرين في الشاشات المتوسطة */
+            white-space: nowrap;
         }
         .nav-links a:hover{
             color:var(--gold-light);
         }
         
-        /* تنسيق قائمة اختيار اللغات المحسنة */
+        /* Menu Déroulant des Langues */
         .lang-dropdown {
             background: rgba(212,175,55,.05);
             color: var(--gold);
@@ -111,7 +111,7 @@
             color: white;
         }
 
-        /* القسم الرئيسي */
+        /* Section Principale (Hero) */
         header{
             padding:60px 20px;
             text-align:center;
@@ -163,7 +163,7 @@
             flex-wrap:wrap;
         }
 
-        /* الأزرار المحسنة */
+        /* Boutons */
         .button{
             display:inline-block;
             padding:14px 28px;
@@ -196,7 +196,7 @@
             color:#111;
         }
 
-        /* الحاويات والأقسام */
+        /* Conteneurs et Sections */
         .container{
             width:90%;
             max-width:1100px;
@@ -216,13 +216,13 @@
             content: '';
             position: absolute;
             bottom: 0;
-            right: 0;
+            left: 0;
             width: 50px;
             height: 3px;
             background: var(--gold);
         }
 
-        /* شبكة الكروت للـ Grid المتناسق */
+        /* Cartes (Grid) */
         .card-actions{
             display:flex;
             flex-direction:column;
@@ -232,7 +232,6 @@
         }
         .cards{
             display:grid;
-            /* تم تعديل الـ minmax هنا ليناسب الشاشات الصغيرة جداً دون خروج عن الحواف */
             grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
             gap:25px;
         }
@@ -274,7 +273,7 @@
             color: var(--gold);
         }
 
-        /* التذييل الفوتر */
+        /* Pied de page (Footer) */
         footer{
             margin-top:80px;
             padding:50px 20px;
@@ -310,7 +309,7 @@
             text-decoration: none;
         }
 
-        /* التجاوب الذكي مع شاشات الهواتف (Media Queries المحسنة) */
+        /* Responsive (Media Queries) */
         @media(max-width:768px){
             .nav-container{
                 flex-direction:column;
@@ -350,7 +349,6 @@
             .contact{
                 font-size:18px;
             }
-            /* جعل روابط الفوتر تظهر بشكل منظم في الهواتف */
             .footer-links{
                 flex-direction:row;
                 justify-content: center;
@@ -364,7 +362,7 @@
                 gap: 12px;
             }
             .cards {
-                grid-template-columns: 1fr; /* كارت واحد ممتد في الشاشات الصغيرة جداً */
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -377,16 +375,16 @@
             <img src="assets/logo.png" alt="AT DRIVE Logo">
         </div>
         <div class="nav-links">
-            <a href="#about">من نحن</a>
-            <a href="#privacy">الخصوصية والتحكم</a>
-            <a href="#technology">التقنيات</a>
-            <a href="#contact">الدعم الفني</a>
+            <a href="#about">À propos</a>
+            <a href="#privacy">Confidentialité</a>
+            <a href="#technology">Technologies</a>
+            <a href="#contact">Support</a>
             
-            <!-- قائمة اختيار اللغات الذكية ثلاثية الخيارات -->
+            <!-- Sélecteur de langue -->
             <select class="lang-dropdown" onchange="location = this.value;">
-                <option value="index.html" selected>العربية</option>
+                <option value="index.html">العربية</option>
                 <option value="index-en.html">English</option>
-                <option value="index-fr.html">Français</option>
+                <option value="index-fr.html" selected>Français</option>
             </select>
         </div>
     </div>
@@ -397,111 +395,111 @@
         <img src="assets/logo.png" alt="AT DRIVE App Logo">
     </div>
     <h1>AT DRIVE</h1>
-    <div class="subtitle">تنقل ذكي. آمن. سريع.</div>
-    <div class="badge">🚀 Powered by Google Maps & Firebase</div>
+    <div class="subtitle">Mobilité intelligente. Sûre. Rapide.</div>
+    <div class="badge">🚀 Propulsé par Google Maps & Firebase</div>
     <p class="hero-text">
-        منصة متطورة ومعتمدة تربط الركاب بالكباتن باستخدام أحدث تقنيات الخرائط والموقع المباشر اللحظي والخدمات السحابية الحديثة لضمان تجربة تنقل يومية موثوقة وآمنة تماماً.
+        Une plateforme moderne et certifiée qui connecte les passagers aux chauffeurs en utilisant les dernières technologies de cartographie, de géolocalisation en temps réel et de services cloud pour garantir une expérience de transport quotidienne totalement fiable et sécurisée.
     </p>
     <div class="hero-buttons">
-        <a class="button" href="#privacy">الخصوصية وإدارة الحساب</a>
-        <a class="secondary-btn" href="#contact">تواصل مع الدعم</a>
+        <a class="button" href="#privacy">Confidentialité & Gestion du compte</a>
+        <a class="secondary-btn" href="#contact">Contacter le support</a>
     </div>
 </header>
 
 <div class="container">
 
     <section class="section">
-        <h2>AT DRIVE بالأرقام</h2>
+        <h2>AT DRIVE en chiffres</h2>
         <div class="cards">
             <div class="card">
                 <h3>24/7</h3>
-                <p>دعم فني مستمر وجاهز لخدمتك في أي وقت.</p>
+                <p>Un support technique continu et prêt à vous servir à tout moment.</p>
             </div>
             <div class="card">
                 <h3>100%</h3>
-                <p>بيانات مستخدم مشفرة ومحمية بالكامل سحابياً.</p>
+                <p>Données utilisateurs entièrement chiffrées et protégées sur le cloud.</p>
             </div>
             <div class="card">
                 <h3>GPS</h3>
-                <p>تتبع حي ومباشر لمسارات الرحلة لضمان السلامة.</p>
+                <p>Suivi en direct des itinéraires de voyage pour garantir votre sécurité.</p>
             </div>
         </div>
     </section>
 
     <section class="section" id="about">
-        <h2>من نحن</h2>
+        <h2>À propos de nous</h2>
         <div class="about">
             <p>
-                AT DRIVE هي منصة رقمية رائدة ومتطورة تهدف إلى إعادة ابتكار وتحسين تجربة النقل والملاحة اليومية لكل من الركاب والكباتن الشركاء، من خلال تسخير التكنولوجيا الحديثة لتوفير رحلات أسهل، واقتصادية، وأكثر أماناً.
+                AT DRIVE est une plateforme numérique de premier plan visant à réinventer et à améliorer l'expérience de transport et de navigation quotidienne pour les passagers et les chauffeurs partenaires, en exploitant les technologies modernes pour offrir des trajets plus simples, économiques et sécurisés.
             </p>
         </div>
     </section>
 
     <section class="section" id="privacy">
-        <h2>الخصوصية وإدارة الحسابات</h2>
+        <h2>Confidentialité et Gestion des comptes</h2>
         <p class="about" style="margin-bottom: 25px;">
-            نحن نحترم خصوصية جميع المستخدمين بشكل صارم، ونلتزم بحفظ وتطهير البيانات الحساسة وفقاً لقوانين حماية البيانات ومتطلبات متجر Google Play. يمكنك الوصول للسياسات أو طلب حذف الحساب مباشرة أدناه:
+            Nous respectons strictement la vie privée de tous les utilisateurs et nous nous engageons à protéger les données sensibles conformément aux lois de protection des données et aux exigences du Google Play Store. Vous pouvez accéder aux politiques ou demander la suppression de votre compte ci-dessous :
         </p>
         <div class="cards">
             <div class="card">
-                <h3>🚖 حساب الراكب (Rider)</h3>
-                <p>إدارة بيانات رحلاتك، والاطلاع على حقوقك البرمجية والتحكم التام في ملفك.</p>
+                <h3>🚖 Compte Passager (Rider)</h3>
+                <p>Gérez vos données de trajet, consultez vos droits et contrôlez entièrement votre profil.</p>
                 <div class="card-actions">
-                    <a class="button" href="rider.html">سياسة خصوصية الراكب</a>
-                    <a class="secondary-btn" href="account-deletion/rider.html">طلب حذف حساب الراكب</a>
+                    <a class="button" href="rider-fr.html">Politique de confidentialité Passager</a>
+                    <a class="secondary-btn" href="account-deletion/rider-fr.html">Supprimer le compte Passager</a>
                 </div>
             </div>
             <div class="card">
-                <h3>🚗 حساب الكابتن (Captain)</h3>
-                <p>تفاصيل تتبع الموقع في الخلفية، مراجعة المستندات الرسمية المرفوعة، والتحكم بالبيانات.</p>
+                <h3>🚗 Compte Chauffeur (Captain)</h3>
+                <p>Détails du suivi de la localisation au premier plan, de la vérification des documents officiels et de la gestion des données.</p>
                 <div class="card-actions">
-                    <a class="button" href="captain.html">سياسة خصوصية الكابتن</a>
-                    <a class="secondary-btn" href="account-deletion/captain.html">طلب حذف حساب الكابتن</a>
+                    <a class="button" href="captain-fr.html">Politique de confidentialité Chauffeur</a>
+                    <a class="secondary-btn" href="account-deletion/captain-fr.html">Supprimer le compte Chauffeur</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section" id="technology">
-        <h2>التقنيات والبنية التحتية</h2>
+        <h2>Technologies et Infrastructure</h2>
         <div class="cards">
             <div class="card">
                 <h3>🔥 Google Firebase</h3>
-                <p>تأمين قواعد البيانات اللحظية المشفرة وإرسال الإشعارات والرسائل الفورية الفعالة.</p>
+                <p>Sécurisation des bases de données chiffrées en temps réel et envoi de notifications instantanées.</p>
             </div>
             <div class="card">
                 <h3>🗺️ Google Maps API</h3>
-                <p>تحديد دقيق للمواقع الجغرافية وتوجيه ذكي للمسارات لتفادي الازدحام المروري.</p>
+                <p>Localisation géographique précise et guidage intelligent pour éviter les embouteillages.</p>
             </div>
             <div class="card">
                 <h3>⚡ Flutter SDK</h3>
-                <p>بناء تطبيق متماسك وعالي الأداء يوفر تجربة سلسة وسريعة لكافة الهواتف.</p>
+                <p>Développement d'une application performante offrant une expérience fluide sur tous les téléphones.</p>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2>لماذا تختار AT DRIVE؟</h2>
+        <h2>Pourquoi choisir AT DRIVE ?</h2>
         <div class="cards">
             <div class="card">
-                <h3>🛡️ أمان وتحقق صارم</h3>
-                <p>فحص ومراجعة مستندات الكباتن الجنائية والمهنية يدوياً قبل تفعيل الحساب.</p>
+                <h3>🛡️ Sécurité & Vérification stricte</h3>
+                <p>Vérification manuelle des antécédents et des documents des chauffeurs avant l'activation du compte.</p>
             </div>
             <div class="card">
-                <h3>📍 تتبع ومشاركة لايف</h3>
-                <p>متابعة دقيقة للرحلة مع إمكانية مشاركة خط السير مع العائلة لمزيد من الاطمئنان.</p>
+                <h3>📍 Suivi & Partage en direct</h3>
+                <p>Suivi précis du trajet avec possibilité de partager l'itinéraire avec votre famille pour plus de sérénité.</p>
             </div>
             <div class="card">
-                <h3>⚡ ربط ذكي وفوري</h3>
-                <p>خوارزميات متطورة تضمن اقترانك بأقرب سيارة متاح بجوارك دون هدر للوقت.</p>
+                <h3>⚡ Connexion intelligente & immédiate</h3>
+                <p>Des algorithmes avancés garantissent votre mise en relation avec le véhicule disponible le plus proche.</p>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2>الأمان والسرية الشاملة</h2>
+        <h2>Sécurité et Confidentialité Totale</h2>
         <div class="about">
-            نحن نطبق بروتوكولات حماية متقدمة لمنع أي وصول غير مصرح به لبيانات المستخدمين. لا نبيع، ولا نؤجر، ولا نشارك البيانات مع أي شركات إعلانية أو ترويجية على الإطلاق، ويقتصر تداول الموقع والأسماء مع الطرف الآخر لإتمام الرحلة النشطة فحسب.
+            Nous appliquons des protocoles de protection avancés pour empêcher tout accès non autorisé aux données des utilisateurs. Nous ne vendons, ne louons et ne partageons jamais vos données avec des sociétés publicitaires. Le partage de la position et des noms est strictement limité entre les deux parties uniquement pour mener à bien la course active.
         </div>
     </section>
 
@@ -509,20 +507,20 @@
 
 <footer id="contact">
     <h3>AT DRIVE</h3>
-    <p style="margin-bottom: 15px;">المنصة الذكية الرائدة لحجز الرحلات الآمنة وتسهيل عمليات التنقل والملاحة الجغرافية.</p>
+    <p style="margin-bottom: 15px;">La plateforme intelligente leader pour la réservation de courses sécurisées et la simplification de la mobilité urbaine.</p>
     
     <div class="footer-links">
-        <a href="rider.html">سياسة خصوصية الراكب</a>
-        <a href="captain.html">سياسة خصوصية الكابتن</a>
-        <a href="account-deletion/rider.html">حذف حساب الراكب</a>
-        <a href="account-deletion/captain.html">حذف حساب الكابتن</a>
+        <a href="rider-fr.html">Confidentialité Passager</a>
+        <a href="captain-fr.html">Confidentialité Chauffeur</a>
+        <a href="account-deletion/rider-fr.html">Supprimer Compte Passager</a>
+        <a href="account-deletion/captain-fr.html">Supprimer Compte Chauffeur</a>
     </div>
 
     <p style="font-size: 18px; margin-top: 15px;">
-        📧 للدعم والاستفسارات:
+        📧 Support et demandes : <a href="mailto:mahmoud12958@gmail.com">mahmoud12958@gmail.com</a>
     </p>
     <br>
-    <p>© 2026 AT DRIVE. جميع الحقوق محفوظة.</p>
+    <p>© 2026 AT DRIVE. Tous droits réservés.</p>
 </footer>
 
 </body>
